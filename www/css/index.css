@@ -1,3 +1,11 @@
+/* FONT */
+@font-face {
+    font-family: 'Slabo27';
+    src: url(fonts/Slabo27px-Regular.ttf);
+}
+
+
+
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
@@ -21,7 +29,7 @@ body {
 /* ----------- HEADER ----------- */
 .header{
     width: 100%;
-    height: 45px;
+    height: 40px;
     padding-top : 30px;
     background-color: #023453;
 }
@@ -47,11 +55,31 @@ body {
 .content{
     margin-top : 10px;
 }
-.content-place{
+.content-place-bg{
     width: 96%;
     height: 80px;
     margin: 0 auto;
     background-color: white;
+}
+.content-place-statut{
+    position: relative;
+    float: left;
+    width: 30%;
+    height: 80px;
+    text-align: center;
+    background-color: #90C367;
+    font-family: 'Slabo27';
+    text-transform: uppercase;
+    font-size: 2.4em;
+    color: white;
+}
+.content-place-name{
+    float: left;
+    position: relative;
+    left : 2%;
+    font-family: 'Slabo27';
+    text-transform: uppercase;
+    font-size: 2.4em;
 }
 
 
