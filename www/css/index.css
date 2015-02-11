@@ -53,12 +53,13 @@ body {
 }
 /* ----------- CONTENT ----------- */
 .content{
-    margin-top : 10px;
+    margin-top : 5px;
 }
 .content-place-bg{
     width: 96%;
     height: 80px;
     margin: 0 auto;
+    margin-top: 7px;
     background-color: white;
 }
 .content-place-statut{
@@ -77,11 +78,31 @@ body {
     float: left;
     position: relative;
     left : 2%;
+    height: 30px;
     font-family: 'Slabo27';
     text-transform: uppercase;
     font-size: 2.4em;
 }
-
+.content-data{
+    position: relative;
+    float: left;
+    left:2%;
+    top: 10px;
+    float: left;
+    height: 40px;
+    width: 60%;
+    color: grey;
+}
+.content-lastactivity{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.content-lastactivity-date{
+    color: grey;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
