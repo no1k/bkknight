@@ -125,7 +125,7 @@ body {
     float: right;
     position: absolute;
     top : 70px;
-    left : 55%;
+    left : 60%;
     font-size: 2em;
     font-family: 'Slabo27';
     text-transform: uppercase;
@@ -134,7 +134,58 @@ body {
     padding: 3px 7px;
     border-radius: 3px;
 }
+.place-buttons{
+    height: 80px;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    border : 1px solid #EBEBEB ;
+    font-size: 1.6em;
+    line-height: 30px;
+    text-transform: uppercase;
+}
 
+.place-button-checkin{
+    width: 33%;
+     height: 100%;
+    float: left;
+    text-align: center;
+    padding-top: 5px;
+}
+.place-button-picture{
+    width: 33%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    padding-top: 5px;
+}
+.place-button-closed{
+    width: 33%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    padding-top: 5px;
+}
+
+
+
+.place-infos{
+    background-color: white;
+    padding: 15px 10px;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    color: grey;
+}
+.place-infos i{
+    font-size: 1.5em;
+    padding-right: 10px;
+}
+.place-location{
+    padding-bottom: 15px;
+}
+.place-lastactivity{
+    padding-top: 15px;
+    border-top : 1px solid #EBEBEB;
+}
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {
