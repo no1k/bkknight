@@ -16,13 +16,18 @@
     <body>
 
         <div class="header">
-            <span class="header-user"> <i class="fa fa-user"></i> </span>
+            <span class="header-left-icon"> <i class="fa fa-chevron-left"></i> </span>
             <span class="header-logo"> <i class="fa fa-map-marker"></i> </span>
-            <span class="header-refresh"> <i class="fa fa-refresh"></i> </span>
+            <span class="header-right-icon"> <i class="fa fa-refresh"></i> </span>
         </div>
 
         <div class="content">
-           
+           <div class="place-header">
+            
+
+           </div>
+
+
 
         </div>
 
@@ -34,7 +39,7 @@
 
             $( document ).ready(function() {
 
-                    $( ".header-user").click(function(){
+                    $( ".header-left-icon").click(function(){
                         $(location).attr('href',"index.html");
                     });
 
