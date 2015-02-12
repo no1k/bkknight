@@ -207,8 +207,20 @@ body {
     padding-bottom: 15px;
 }
 .place-lastactivity{
+    padding: 15px 0px;
+    border-top : 1px solid #EBEBEB;
+}
+.place-tags{
     padding-top: 15px;
     border-top : 1px solid #EBEBEB;
+}
+.place-tags span{
+    background-color: grey;
+    margin: 0px 5px;
+    padding: 3px;
+    color: white;
+    border-radius: 3px;
+    text-transform: uppercase;
 }
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
