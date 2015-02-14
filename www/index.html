@@ -25,10 +25,47 @@
 
         <div class="search">
             <div class="search-bar"> <input type="text" name="search" id="search" placeholder="&#xF002; Search for places"/> </div>
-
         </div>
 
-        <div class="content">
+        <div class="wrapper">
+            <div class="scroll-content"/>
+                <ul>
+
+                    <li> yo s</li>
+                    <li> yolso </li>
+                    <li> yolso </li>
+                    <li> yolso </li>
+                    <li> yolso </li>
+                    <li> yo </li>
+                    <li> yolo </li>
+
+                    <li> yo </li>
+                    <li> yolo </li>
+
+                    <li> yo </li>
+                    <li> yolo </li>
+                    <li> yo s</li>
+                    <li> yolso </li>
+                    <li> yolso </li>
+                    <li> yolso </li>
+                    <li> yolso </li>
+                    <li> yo </li>
+                    <li> yolo </li>
+
+                    <li> yo </li>
+                    <li> yolo </li>
+
+                    <li> yo </li>
+                    <li> yolo </li>
+
+
+                </ul>
+
+
+            </div>
+        </div>
+
+  <!--      <div class="content">
             <div class="content-place-bg">
                 <div class="content-place-statut"> open now </div>
                 <div class="content-place-name"> Mixx </div>
@@ -47,19 +84,26 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
 
+  </body>
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="js/iscroll.js"></script>
+
         <script>
+              
 
             $( document ).ready(function() {
 
                     $( ".content-place-bg").click(function(){
                         $(location).attr('href',"place.html");
                     });
+
+                    var myScroll;
+                myScroll = new IScroll('.wrapper');   
 
 
                 
@@ -68,5 +112,5 @@
         </script>
 
 
-    </body>
+  
 </html>
