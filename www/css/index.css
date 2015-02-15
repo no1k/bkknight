@@ -103,7 +103,7 @@ body {
 }
 .d-place{
     width: 96%;
-    height: 60px;
+    height: 70px;
     margin: 0 auto;
     margin-bottom: 7px;
     background-color: white;
@@ -140,17 +140,26 @@ body {
 .d-place-distance{
     display: inline-block;
     float: right;
-    background-color: lightgrey;
+    border:1px solid lightgrey;
     margin: 5px;
-    padding: 3px 6px;
+    padding: 2px 6px;
     border-radius: 3px;
 }
 .d-place-bottom{
     display: inline-block;
     width: 60%;
     height: 50%;
-    background-color: red;
     float: left;
+}
+.d-place-lastactivity{
+    display: inline-block;
+    float: left;
+    background-color: grey;
+    margin: 0px 10px;
+}
+.d-place-recommendation{
+    float: right;
+    display:inline-block;
 }
 /*.wrapper ul{
     list-style:none;
