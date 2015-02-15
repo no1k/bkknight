@@ -26,7 +26,7 @@
 
         <div class="wrapper">
             <div class="scroll-content"/>
-            
+
             <div class="search">
             <div class="search-bar"> <input type="text" name="search" id="search" placeholder="&#xF002; Search for places"/> </div>
         </div>
@@ -36,7 +36,7 @@
                     <div class="d-place-statut"> <p>Open<br>now</p> </div>
                         <div class="d-place-top">
                             <div class="d-place-name"> Mixx </div>
-                            <div class="d-place-distance"> 2KM </div>
+                            <div class="d-place-distance"> 4KM </div>
                         </div>
                          <div class="d-place-bottom"> 
                              <div class="d-place-lastactivity"> Last activity  <br> 3 </div> 
@@ -104,16 +104,18 @@
 
             $( document ).ready(function() {
 
-                        
+                    // Scroll event content
                     var myScroll = new IScroll('.wrapper', {
                         click: true,
                     });
 
-
+                    // Click event to focus on places
                     $( ".d-place" ).click(function(){
                         $(location).attr('href',"place.html");
                     });
 
+                    // Ajax call places
+                    $("scroll-content").load("http://infactr.com/bkknight/lastactivity.php");
                   
                 
             });
