@@ -111,11 +111,19 @@ body {
 }
 .d-place{
     width: 96%;
-    height: 70px;
+    height: 90px;
     margin: 0 auto;
     margin-bottom: 7px;
-    background-color: white;
+    overflow:hidden;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))), url('../img/demo_club.jpg') no-repeat;
+    background-size: 100%;
 }
+.d-place .name{
+    font-size: 3em;
+    color: white;
+
+}
+/*
 .d-place-statut{
     position: relative;
     float: left;
@@ -179,7 +187,7 @@ body {
     margin-right: 10px;
     color: #E9EAEB;
 }
-/*.wrapper ul{
+.wrapper ul{
     list-style:none;
     padding:0;
     margin:0;
