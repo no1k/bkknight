@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="utf-8" />
@@ -54,7 +53,7 @@
                 </div>
 
 
-                
+        
 
 
             </div>
@@ -63,29 +62,6 @@
         </div>
         </div>
 
-
-        <div class="lol"> lol </div>
-
-  <!--      <div class="content">
-            <div class="content-place-bg">
-                <div class="content-place-statut"> open now </div>
-                <div class="content-place-name"> Mixx </div>
-                <div class="content-data">
-                    <div class="content-lastactivity"> Last activity </div>
-                    <div class="content-lastactivity-date"> 3 min ago </div>
-                </div>
-            </div>
-
-             <div class="content-place-bg">
-                <div class="content-place-statut"> open now </div>
-                <div class="content-place-name"> Mixx </div>
-                <div class="content-data">
-                    <div class="content-lastactivity"> Last activity </div>
-                    <div class="content-lastactivity-date"> 3 min ago </div>
-                </div>
-            </div>
-
-        </div> -->
 
   </body>
 
@@ -110,7 +86,18 @@
                     });
 
                     // Ajax call places
-                    $("scroll-content").load("http://infactr.com/bkknight/lastactivity.php");
+                    
+                 //   $(".scroll-content").append($.load("http://infactr.com/bkknight/lastactivity.php"));
+
+                     $.ajax({
+                        dataType:'html',
+                        url:'http://www.infactr.com/bkknight/lastactivity.php',
+                            success:function(data) {
+                                 $('.scroll-content').html($(data));   
+                            }
+                            });
+                  
+                   
                   
                 
             });
