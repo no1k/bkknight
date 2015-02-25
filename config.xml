@@ -25,7 +25,9 @@
   <preference name="android-minSdkVersion" value="7"/>
   <preference name="android-installLocation" value="auto"/>
   
-  <preference name="StatusBarBackgroundColor" value="#023453" />
+  <preference name="StatusBarBackgroundColor" value="#FFFFFF" />
+  <preference name="StatusBarOverlaysWebView" value="true" />
+
   <gap:plugin name="com.phonegap.plugin.statusbar" />
 
 
