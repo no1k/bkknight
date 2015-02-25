@@ -4,12 +4,19 @@
     src: url(fonts/Slabo27px-Regular.ttf);
 }
 
+   /* ADD ON 25/02/2014 */
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+
+
 
 
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
-
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
@@ -22,6 +29,12 @@ body {
     margin:0px;
     padding:0px;
     width:100%;
+
+
+    /* ADD ON 25/02/2014 */
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100%;
 }
 
 /* Portrait layout (default) */
@@ -29,12 +42,16 @@ body {
 /* ----------- HEADER ----------- */
 .header{
     position: fixed; 
-    z-index:2;
     top:0; left:0;
     width: 100%;
-    height: 40px;
-    padding-top : 30px;
+    z-index: 1000;
+    padding-top : 10px;
     background-color: #023453;
+    overflow: hidden;
+    margin: 0px;
+    max-height: 55px !important;
+    height: 55px !important;
+    line-height: 55px;
 }
 .header-left-icon{
     position: relative;
@@ -89,16 +106,16 @@ body {
 /* ----------- WAPPER ----------- */
 
 .wrapper{
-    position:absolute; 
-    z-index:1;
-    top:70px;
-    width:100%;
-}
-.scroll-content {
-    position:absolute; 
-    z-index:1;
-    width:100%;
-    padding:0;
+    top: 65px;
+    left:0;
+    right:0;
+    bottom:0;
+    position:absolute;
+    /* IF FOOTER
+    margin-bottom:15px; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; /*to make it smooth as native*/
 }
 .d-place{
     width: 96%;
@@ -149,115 +166,6 @@ body {
 .d-place .lastactivity{
     margin-left: 3%;
 }
-/*
-.d-place-statut{
-    position: relative;
-    float: left;
-    top:0px; left:0px;
-    display: inline-block;
-    width: 25%;
-    height: 100%;
-    text-align: center;
-    background-color: #90C367;
-    font-family: 'Slabo27';
-    text-transform: uppercase;
-    font-size: 2em;
-    color: white;
-}
-.d-place-statut p{
-    margin-top : 5px;
-    padding: 0;
-}
-.d-place-top{
-    display: inline-block;
-    width: 60%;
-    height: 50%;
-    float: left;
-}
-.d-place-name{
-    position: relative;
-    top:0px; left:0px;
-    padding-left: 5px;
-    display: inline-block;
-    font-family: 'Slabo27';
-    text-transform: uppercase;
-    font-size: 2em;
-}
-.d-place-distance{
-    display: inline-block;
-    float: right;
-    border:1px solid lightgrey;
-    margin: 5px;
-    padding: 2px 6px;
-    border-radius: 3px;
-}
-.d-place-bottom{
-    display: inline-block;
-    width: 60%;
-    height: 50%;
-    float: left;
-}
-.d-place-lastactivity{
-    display: inline-block;
-    float: left;
-    background-color: grey;
-    margin: 0px 10px;
-}
-.d-place-recommendation{
-    float: right;
-    display:inline-block;
-}
-.d-place-focus{
-    float: right;
-    font-size: 4em;
-    margin-right: 10px;
-    color: #E9EAEB;
-}
-.wrapper ul{
-    list-style:none;
-    padding:0;
-    margin:0;
-    width:100%;
-    text-align: left;
-}
-.wrapper ul li{
-    width: 96%;
-    height: 60px;
-    margin: 0 auto;
-    margin-bottom: 7px;
-    background-color: white;
-}
-.wrapper ul li h1{
-    position: relative;
-    top:0px; left:0px;
-    margin: 0px;
-    padding: 0px;
-    width: 25%;
-    height: 100%;
-    display: inline-block;
-    background-color: #90C367;
-    font-family: 'Slabo27';
-    text-transform: uppercase;
-    font-size: 2em;
-    color: white;
-}
-.wrapper .stat{
-    position: relative;
-    top:2px;
-    display: inline-block;
-    margin: 0px;
-    padding: 0px;
-}
-*/
-
-
-
-
-
-
-
-
-
 
 /* ----------- CONTENT ----------- */
 .content{

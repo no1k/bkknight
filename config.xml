@@ -6,7 +6,9 @@
 
   <!-- AJAX -->
   <access origin="*" />
-  
+  <!-- OVERSCROLL -->
+  <preference name="DisallowOverscroll" value="true" />
+
   <preference name="permissions" value="none"/>
   <preference name="orientation" value="portrait"/>
   <preference name="target-device" value="universal"/>
