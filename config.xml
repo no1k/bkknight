@@ -25,6 +25,10 @@
   <preference name="android-minSdkVersion" value="7"/>
   <preference name="android-installLocation" value="auto"/>
   
+  <preference name="StatusBarBackgroundColor" value="#000000" />
+  <gap:plugin name="com.phonegap.plugin.statusbar" />
+
+
   <gap:plugin name="org.apache.cordova.battery-status"/>
   <gap:plugin name="org.apache.cordova.camera"/>
   <gap:plugin name="org.apache.cordova.media-capture"/>
