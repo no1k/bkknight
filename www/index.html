@@ -24,12 +24,16 @@
 
 
         <div class="wrapper">
+            
+
+
             <div class="scroll-content"/>
 
             <div class="search">
                  <div class="search-bar"> <input type="text" name="search" id="search" placeholder="&#xF002; Search for places"/> </div>
             </div>
                 
+
                 <div class="d-place">
                     <span class="name"> Demo </span>
                     <span class="statut"> open now </span>
@@ -52,6 +56,71 @@
                     </div>
                 </div>
 
+                <div class="d-place" style="background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))), url(img/villa_pic.jpg) no-repeat; background-size:100%">
+                    <span class="name"> FUNKY VILLA </span>
+                    <span class="statut"> open now </span>
+                    <div class="data"> 
+                        <span class="type"> Nightclub </span>
+                        <span class="distance"> <i class="fa fa-map-marker"></i> 1.3km </span>
+                        <span class="lastactivity"> <i class="fa fa-heartbeat"></i> 3min ago </span>
+
+                    </div>
+                </div>
+
+                <div class="d-place" style="background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))), url(img/villa_pic.jpg) no-repeat; background-size:100%">
+                    <span class="name"> FUNKY VILLA </span>
+                    <span class="statut"> open now </span>
+                    <div class="data"> 
+                        <span class="type"> Nightclub </span>
+                        <span class="distance"> <i class="fa fa-map-marker"></i> 1.3km </span>
+                        <span class="lastactivity"> <i class="fa fa-heartbeat"></i> 3min ago </span>
+
+                    </div>
+                </div>
+
+                <div class="d-place" style="background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))), url(img/villa_pic.jpg) no-repeat; background-size:100%">
+                    <span class="name"> FUNKY VILLA </span>
+                    <span class="statut"> open now </span>
+                    <div class="data"> 
+                        <span class="type"> Nightclub </span>
+                        <span class="distance"> <i class="fa fa-map-marker"></i> 1.3km </span>
+                        <span class="lastactivity"> <i class="fa fa-heartbeat"></i> 3min ago </span>
+
+                    </div>
+                </div>
+
+                <div class="d-place" style="background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))), url(img/villa_pic.jpg) no-repeat; background-size:100%">
+                    <span class="name"> FUNKY VILLA </span>
+                    <span class="statut"> open now </span>
+                    <div class="data"> 
+                        <span class="type"> Nightclub </span>
+                        <span class="distance"> <i class="fa fa-map-marker"></i> 1.3km </span>
+                        <span class="lastactivity"> <i class="fa fa-heartbeat"></i> 3min ago </span>
+
+                    </div>
+                </div>
+
+                <div class="d-place" style="background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))), url(img/villa_pic.jpg) no-repeat; background-size:100%">
+                    <span class="name"> FUNKY VILLA </span>
+                    <span class="statut"> open now </span>
+                    <div class="data"> 
+                        <span class="type"> Nightclub </span>
+                        <span class="distance"> <i class="fa fa-map-marker"></i> 1.3km </span>
+                        <span class="lastactivity"> <i class="fa fa-heartbeat"></i> 3min ago </span>
+
+                    </div>
+                </div>
+
+                <div class="d-place" style="background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))), url(img/villa_pic.jpg) no-repeat; background-size:100%">
+                    <span class="name"> FUNKY VILLA </span>
+                    <span class="statut"> open now </span>
+                    <div class="data"> 
+                        <span class="type"> Nightclub </span>
+                        <span class="distance"> <i class="fa fa-map-marker"></i> 1.3km </span>
+                        <span class="lastactivity"> <i class="fa fa-heartbeat"></i> 3min ago </span>
+
+                    </div>
+                </div>
 
         
 
@@ -75,21 +144,11 @@
 
             $( document ).ready(function() {
 
-                    // Scroll event content
-                    var myScroll = new IScroll('.wrapper', {
-                        click: true,
-                    });
-
-                    // Click event to focus on places
-                    $( ".d-place" ).click(function(){
-                        $(location).attr('href',"place.html");
-                    });
-
+            
                     // Ajax call places
-                    
-                 //   $(".scroll-content").append($.load("http://infactr.com/bkknight/lastactivity.php"));
+                
 
-                     $.ajax({
+                    /* $.ajax({
                         dataType:'html',
                         url:'http://www.infactr.com/bkknight/lastactivity.php',
                             success:function(data) {
@@ -97,7 +156,7 @@
                             }
                             });
                   
-                   
+                   */
                   
                 
             });

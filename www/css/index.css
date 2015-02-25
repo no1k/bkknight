@@ -28,7 +28,7 @@ body {
 
 /* ----------- HEADER ----------- */
 .header{
-    position:absolute; 
+    position: fixed; 
     z-index:2;
     top:0; left:0;
     width: 100%;
@@ -43,6 +43,13 @@ body {
     color: white;
     font-size: 2em;
 }
+.header-right-icon{
+    position: relative;
+    float: right;
+    right: 5%;
+    color: white;
+    font-size: 2em;
+}
 .header-logo{
     position: relative;
     float: left;
@@ -52,23 +59,8 @@ body {
     font-family: 'roboto';
     font-weight: 400;
 }
-.header-right-icon{
-    position: relative;
-    float: right;
-    right: 5%;
-    color: white;
-    font-size: 2em;
-}
+
 /* ----------- SEARCH ----------- */
-/*.search{
-    position:absolute; 
-    z-index:1;
-    top:0px;
-    width:100%;
-    height: 40px;
-    background-color: #F6F7F8;
-    padding-top: 10px;
-}*/
 .search{
     width:100%;
     height: 35px;
@@ -101,7 +93,6 @@ body {
     z-index:1;
     top:70px;
     width:100%;
-
 }
 .scroll-content {
     position:absolute; 
