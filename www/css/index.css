@@ -58,14 +58,14 @@ body {
     float: left;
     left: 5%;
     color: white;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 .header-right-icon{
     position: relative;
     float: right;
     right: 5%;
     color: white;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 .header-logo{
     position: relative;
@@ -131,15 +131,15 @@ body {
     color: #FFF;
     width: 25%;
     margin: 10px 3% 0% 0%;
-    padding: 5px 7px;
-    border-radius: 5px;
+    padding: 3px 4px;
+    border-radius: 2px;
     text-align: center;
-    background-color: RGBA(36, 81, 27, 0.9);
-     font-family: 'Roboto', sans-serif;
+    background-color: RGBA(36, 81, 27, 1);
+    font-family: 'Slabo27', sans-serif;
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 1.3em;
-    border:1px solid RGBA(216, 216, 216, 0.2);
+    font-size: 1.5em;
+    /*border:1px solid RGBA(216, 216, 216, 0.2);*/
 }
 .d-place .data{
     margin: 37px 5px 5px 5px;
@@ -167,63 +167,28 @@ body {
     margin-left: 3%;
 }
 
-/* ----------- CONTENT ----------- */
-.content{
-    position:absolute; 
-    z-index:1;
-    top:120px;
+/* ----------- PLACE PAGE ----------- */
+.places-wrapper{
+    top: 65px;
+    left:0;
+    right:0;
+    bottom:0;
+    position:absolute;
+    margin-bottom:60px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; /*to make it smooth as native*/
+}
+.places-footer{
+    overflow: hidden;
+    position: fixed;
+    bottom:0px;
+    z-index: 1;
+    overflow: auto;
+    background-color: #c9c9c9;
     width:100%;
+    height:60px;
 }
-.content-place-bg{
-    width: 96%;
-    height: 80px;
-    margin: 0 auto;
-    margin-top: 7px;
-    background-color: white;
-}
-.content-place-statut{
-    position: relative;
-    float: left;
-    width: 30%;
-    height: 80px;
-    text-align: center;
-    background-color: #90C367;
-    font-family: 'Slabo27';
-    text-transform: uppercase;
-    font-size: 2.4em;
-    color: white;
-}
-.content-place-name{
-    float: left;
-    position: relative;
-    left : 2%;
-    height: 30px;
-    font-family: 'Slabo27';
-    text-transform: uppercase;
-    font-size: 2.4em;
-}
-.content-data{
-    position: relative;
-    float: left;
-    left:2%;
-    top: 10px;
-    float: left;
-    height: 40px;
-    width: 60%;
-    color: grey;
-}
-.content-lastactivity{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-}
-.content-lastactivity-date{
-    color: grey;
-    font-size: 1.5em;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-}
-
-/* ----------- PLACE ----------- */
 .place-header{
     width: 100%;
     height: 130px;
@@ -258,14 +223,14 @@ body {
     background-color: white;
     font-family: 'Roboto', sans-serif;
     border : 1px solid #EBEBEB ;
-    font-size: 1.6em;
-    line-height: 30px;
+    font-size: 1.4em;
+    line-height: 25px;
     text-transform: uppercase;
 }
 
 .place-button-checkin{
     width: 33%;
-     height: 100%;
+    height: 100%;
     float: left;
     text-align: center;
     padding-top: 5px;
@@ -276,6 +241,7 @@ body {
     float: left;
     text-align: center;
     padding-top: 5px;
+    background-color: red;
 }
 .place-button-closed{
     width: 33%;
@@ -317,6 +283,25 @@ body {
     border-radius: 3px;
     text-transform: uppercase;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {

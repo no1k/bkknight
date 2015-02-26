@@ -1,38 +1,35 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" href="css/fonts/font-awesome-4.3.0/css/font-awesome.min.css">
-        <link href='http://fonts.googleapis.com/css?family=Roboto:900,500,100,300,700,400' rel='stylesheet' type='text/css'>
-        <title>BKKnight</title>
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+    <!--
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />  , target-densitydpi=device-dpi -->
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="css/fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:900,500,100,300,700,400' rel='stylesheet' type='text/css'>
+    <title>BKKnight</title>
+</head>
+<body>
 
-    <body>
+        
+    <div class="header">
+        <span class="header-left-icon"> <i class="fa fa-chevron-left"></i> </span>
+        <span class="header-logo"> BKKnight </span>
+        <span class="header-right-icon"> <i class="fa fa-refresh"></i> </span>
+    </div>
 
-        <div class="header">
-            <span class="header-left-icon"> <i class="fa fa-chevron-left"></i> </span>
-            <span class="header-logo"> <i class="fa fa-map-marker"></i> </span>
-            <span class="header-right-icon"> <i class="fa fa-refresh"></i> </span>
-        </div>
-
-        <div class="content">
+        <div class="places-wrapper">
            <div class="place-header">
                 <img src="http://stylecityblog.files.wordpress.com/2012/09/mixx.jpg" width="100%" height="130px" />
                 <div class="place-name"> Mixx </div>
                 <div class="place-statut"> open now </div>
            </div>
 
-           <div class="place-buttons">
-                <div class="place-button-checkin"> <i class="fa fa-check"></i> <br> I'm inside </div>
-                <div class="place-button-picture"> <i class="fa fa-camera"></i> <br> picture </div>
-                <div class="place-button-closed"> <i class="fa fa-times"></i> <br> closed </div>
-           </div>
+           
 
            <div class="place-infos">
                 <div class="place-location"> <i class="fa fa-map-marker"></i>  <a href="maps://?q=13.744952,100.541138"> click </a> Hôtel lavoria cambell, 3022, Avenue BANGKOK </div> 
@@ -41,9 +38,23 @@
 
            </div>
 
+           <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
 
 
         </div>
+
+        <div class="places-footer"> 
+
+                <div class="place-buttons">
+                <div class="place-button-checkin"> <i class="fa fa-check"></i> <br> I'm inside </div>
+                <div class="place-button-picture"> <i class="fa fa-camera"></i> <br> picture </div>
+                <div class="place-button-closed"> <i class="fa fa-times"></i> <br> closed </div>
+           </div>
+
+
+
+         </div>
 
 
         <script type="text/javascript" src="cordova.js"></script>
