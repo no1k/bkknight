@@ -23,14 +23,13 @@
 
     <div class="places-wrapper">
         <div class="form">
-            <form>
-                <input type="email" id="mail" name="mail" placeholder="&#xf0e0; &nbsp; &nbsp; Enter you email">
+            <form id="suscribe">
+                <input type="email" id="mail" name="mail" placeholder="&#xf0e0; &nbsp; &nbsp; Enter your email">
                 <input type="text" id="username" placeholder="&#xf007; &nbsp; &nbsp; Create a username">
                 <input type="password" id="password" placeholder="&#xf023; &nbsp; &nbsp; Create a password">
                 <input type="tel" id="age?" placeholder="&#xf073; &nbsp; &nbsp; What's your age?">
-
             </form>
-            <br>
+    
             <div class="term"> 
                 By signing up, you are indicating that you have read and agreed to our <a href="#">Terms of service</a> and <a href="#">Privacy Policy </a>.
             </div>
@@ -60,6 +59,9 @@ $( ".header-left-icon").click(function(){
             $(location).attr('href',"index.html");
 });    
 
+$( ".header-right-icon").click(function(){
+            $(location).attr('href',"index2.html");
+});  
 
 
 
@@ -69,6 +71,7 @@ $(".validator").click(function(){
 
     var lol = $("input#mail").val();
     alert(lol);
+
 
 
 
