@@ -13,10 +13,32 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:900,500,100,300,700,400' rel='stylesheet' type='text/css'>
     <title>BKKnight</title>
 </head>
-
 <body>
 
-  
+   <div class="header">
+        <span class="header-left-icon"> <i class="fa fa-chevron-left"></i> </span>
+        <span class="header-logo"> BKKnight </span>
+        <span class="header-right-icon"> Next </span>
+    </div>
+
+    <div class="wrapper">
+        <div class="form">
+            <form>
+                <input type="text" id="mail" placeholder="&#xf0e0; &nbsp; &nbsp; Enter you email">
+                <input type="text" id="username" placeholder="&#xf007; &nbsp; &nbsp; Create a username">
+                <input type="text" id="password" placeholder="&#xf023; &nbsp; &nbsp; Create a password">
+                <input type="text" id="age?" placeholder="&#xf073; &nbsp; &nbsp; What's your age?">
+
+            </form>
+
+
+
+        </div>
+    </div>
+
+
+
+
 
 </body>
 
@@ -26,22 +48,6 @@
 
 <script>
               
-
-$( document ).ready(function() {
-
-    var fbLoginSuccess = function (userData) {
-    alert("UserInfo: " + JSON.stringify(userData));
-}
-
-facebookConnectPlugin.login(["public_profile"],
-    fbLoginSuccess,
-    function (error) { alert("" + error) }
-);
-
-    
-                
-});
-
 </script>
 
 
