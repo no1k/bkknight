@@ -45,13 +45,13 @@ body {
     top:0; left:0;
     width: 100%;
     z-index: 1000;
-    padding-top : 10px;
+    padding-top : 15px;
     background-color: #023453;
     overflow: hidden;
     margin: 0px;
-    max-height: 55px !important;
-    height: 55px !important;
-    line-height: 55px;
+    max-height: 50px !important;
+    height: 50px !important;
+    line-height: 50px;
 }
 .header-left-icon{
     position: relative;
@@ -72,9 +72,10 @@ body {
     float: left;
     left: 30%;
     color: white;
-    font-size: 2em;
+    font-size: 1.7em;
     font-family: 'roboto';
-    font-weight: 400;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 /* ----------- SEARCH ----------- */
