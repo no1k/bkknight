@@ -89,9 +89,9 @@ $(".validator").click(function(){
             cache: false,
             success: function(result){
 
-            $.cookie('name', 'yolo', { path: '/' });
-            alert($.cookie());
-            //$(location).attr('href',"index2.html");
+            $.cookie('bkknight_cookie', mail, { path: '/', expires: 365 });
+            alert($.cookie('bkknight_cookie'));
+            $(location).attr('href',"index2.html");
 
         }
     });
