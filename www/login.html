@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+    <!--
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />  , target-densitydpi=device-dpi -->
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="css/fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:900,500,100,300,700,400' rel='stylesheet' type='text/css'>
+    <title>BKKnight</title>
+</head>
+<body>
+
+   <div class="header">
+        <span class="header-left-icon"> <i class="fa fa-arrow-left"></i> </span>
+        <span class="header-logo"> BKKnight </span>
+        <span class="header-right-icon validator"> Next </span>
+    </div>
+
+    <div class="places-wrapper">
+        <div class="form">
+            <form id="suscribe">
+                <input type="email" id="mail" name="mail" placeholder="&#xf0e0; &nbsp; &nbsp; Enter your email">
+                <input type="password" id="password" placeholder="&#xf023; &nbsp; &nbsp;  Enter password">
+            </form>
+        </div>
+
+    </div>
+
+
+<div class="places-footer"> 
+    <div class="action validator"> Next </div>
+</div>
+
+
+</body>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-cookie-master/src/jquery.cookie.js"></script>
+
+
+<script>
+
+$( document ).ready(function() {
+
+// HEADER LINKS REDIRECTIONS
+
+$( ".header-left-icon").click(function(){
+            $(location).attr('href',"index.html");
+});    
+
+
+// TEST FORM ENTRIES BEFORE SUBMIT
+
+$(".validator").click(function(){
+
+
+    var mail     = $("input#mail").val();
+    var password = $("input#password").val();
+
+
+    var dataString = 'mail=' + mail + '&password=' + password;
+
+    if(mail==''||password=='')
+    {
+        alert("Please Fill All Fields");
+    }else{
+        $.ajax({
+            type: "POST",
+            url: "http://www.infactr.com/bkknight/login.php",
+            data: dataString,
+            cache: false,
+            success: function(result){
+            if(result == 'false'){
+                alert('Wrong login');
+            }else{
+                $.cookie('bkknight_cookie', mail, { path: '/', expires: 365 });
+                $(location).attr('href',"index2.html");
+            }
+        
+    
+
+        }
+    });
+    }
+
+
+
+ });
+                
+});
+   
+</script>
+
+
+  
+</html>

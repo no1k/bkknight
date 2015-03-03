@@ -23,9 +23,7 @@
     </div>
 
         <div class="places-wrapper">
-            <div class="places-hits">
-                <div class="hits"> Pierre7 Baudet just checked in </div>
-            </div>
+           
         </div>
 
         <div class="places-footer"> 
@@ -44,13 +42,18 @@
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-cookie-master/src/jquery.cookie.js"></script>
 <script>
 
 $( document ).ready(function() {
 
+    // HEADER REDIRECTIONS
+
      $( ".header-left-icon").click(function(){
             $(location).attr('href',"index2.html");
     });
+
+    // AJAX LOADING
 
     $( document ).ajaxStart(function() {
         $( " .header-right-icon " ).html("<i class='fa fa-refresh fa-spin'></i>");
@@ -97,6 +100,29 @@ $( document ).ready(function() {
 
    });
         
+    // BUTTON EVENTS
+
+    $( ".place-button-checkin" ).click(function(){
+
+        var user = $.cookie('bkknight_cookie');
+        var name = getUrlParameter('ref');
+
+        
+        var dataString = 'user=' + user + '&place=' + name;
+
+         $.ajax({
+            type: "POST",
+            url: "http://www.infactr.com/bkknight/addhit.php",
+            data: dataString,
+            cache: false,
+            success: function(result){
+
+              $( ".place-button-checkin" ).css("background-color", "#18191B").css("color", "#FFFFFF");
+
+            }
+        });
+
+    });
 
                 
 });
