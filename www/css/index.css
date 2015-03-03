@@ -202,7 +202,7 @@ body {
     float : left;
     position: absolute;
     top: 60px;
-    font-size: 4em;
+    font-size: 3.5em;
     font-family: 'Slabo27';
     text-transform: uppercase;
     color: white;
@@ -221,6 +221,57 @@ body {
     padding: 3px 7px;
     border-radius: 3px;
 }
+.place-infos{
+    background-color: white;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    color: #A2A3A5;
+}
+.place-infos i{
+    font-size: 1.5em;
+    padding-right: 10px;
+}
+.place-location{
+    padding-bottom: 15px;
+}
+.place-lastactivity{
+    padding: 15px 0px;
+    border-top : 1px solid #EBEBEB;
+}
+.place-tags{
+    padding-top: 15px;
+    border-top : 1px solid #EBEBEB;
+}
+.place-tags span{
+    background-color: #A2A3A5;
+    margin: 0px 5px;
+    padding: 3px;
+    color: white;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.place-hits{
+    width: 97%;
+    margin: 0 auto;
+}
+.place-hits .hit{
+    box-sizing: Border-box;
+    width: 100%;
+    padding: 0px 10px;
+    height: 50px;
+    font-size: 1.1em;
+    background-color: #FFF;
+    line-height: 50px;
+    margin-bottom: 5px;
+}
+.place-hits .hit-time{
+    float: right;
+}
+
+
+
 .place-buttons{
     height: 80px;
     background-color: #262729;
@@ -231,7 +282,6 @@ body {
     line-height: 25px;
     text-transform: uppercase;
 }
-
 .place-button-checkin{
     width: 38%;
     height: 100%;
@@ -259,36 +309,7 @@ body {
 
 
 
-.place-infos{
-    background-color: white;
-    padding: 15px 10px;
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif;
-    color: grey;
-}
-.place-infos i{
-    font-size: 1.5em;
-    padding-right: 10px;
-}
-.place-location{
-    padding-bottom: 15px;
-}
-.place-lastactivity{
-    padding: 15px 0px;
-    border-top : 1px solid #EBEBEB;
-}
-.place-tags{
-    padding-top: 15px;
-    border-top : 1px solid #EBEBEB;
-}
-.place-tags span{
-    background-color: grey;
-    margin: 0px 5px;
-    padding: 3px;
-    color: white;
-    border-radius: 3px;
-    text-transform: uppercase;
-}
+
 /* ----------- LOGIN PAGE ----------- */
 .login-page
 {
@@ -380,10 +401,10 @@ body {
 .places-footer .action{
     width: 100%;
     height: 100%;
-    background-color: #FFFFFF;
+    background-color: #60A5CC;
     text-align: center;
     line-height: 60px;
-    color: #023453;
+    color: #FFFFFF;
     font-size: 2em;
 }
 /* ----------- USER PAGE ----------- */

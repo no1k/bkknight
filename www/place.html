@@ -23,9 +23,9 @@
     </div>
 
         <div class="places-wrapper">
-           
-
-
+            <div class="places-hits">
+                <div class="hits"> Pierre7 Baudet just checked in </div>
+            </div>
         </div>
 
         <div class="places-footer"> 
@@ -79,7 +79,7 @@ $( document ).ready(function() {
     function loadPlace() {
      $.ajax({
         dataType:'html',
-        url:'http://www.infactr.com/bkknight/place.php?name='+name,
+        url:'http://www.infactr.com/bkknight/getplacedata.php?name='+name,
             success:function(data) {
                  //ADD THE PLACES
                 $( ".places-wrapper" ).html($(data)); 
