@@ -29,10 +29,11 @@
     </div>
     <div class="user-stats">
         <span class="user-stat-box"> Check in : <span class="data checkin"> 0 </span>  </span>
-        <span class="user-stat-box"> Check out :<span class="data checkout"> 0</span>  </span>
+        <span class="user-stat-box"> Closed :<span class="data checkout"> 0</span>  </span>
         <span class="user-stat-box"> photos :   <span class="data photos"> 0</span>   </span>
 
     </div>
+
 
 
 
@@ -65,11 +66,12 @@ var dataString = $.cookie('bkknight_cookie');
 
 $.ajax({
     type: "get",
-    dataType: "html",
+    dataType: "json",
     url: "http://www.infactr.com/bkknight/getuserdata.php?cookie="+dataString,
     success: function(data){
 
-        $( ".lol" ).html(data);
+        $( ".user-header-profile-username p" ).html(data["user_username"]);
+    
 
     }
 });
