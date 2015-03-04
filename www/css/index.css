@@ -405,6 +405,17 @@ body {
 .form .term a{
     color:#949494;
 }
+.form-error{
+    display: none;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: white;
+    background-color: #EE797A;
+    font-family: 'Roboto', 'FontAwesome';
+    font-weight: 300;  
+}
 .places-footer .action{
     width: 100%;
     height: 100%;
@@ -466,8 +477,7 @@ body {
     border-right:none;
 }
 .user-stat-box .data{
-    font-size: 1.6em;
-    color: red;
+    font-size: 1.8em;
     color: #949494;
     display: block;
 }

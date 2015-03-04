@@ -55,13 +55,13 @@
  
 $( document ).ready(function() {
 
- $( ".header-left-icon" ).click(function(){
 
+// ADD HEADER EVENTS
+$( ".header-left-icon" ).click(function(){
     $(location).attr('href',"index2.html");
+});
 
-   });
-
-
+// GET USER DATA
 var dataString = $.cookie('bkknight_cookie');
 
 $.ajax({
@@ -70,8 +70,8 @@ $.ajax({
     url: "http://www.infactr.com/bkknight/getuserdata.php?cookie="+dataString,
     success: function(data){
 
-        $( ".user-header-profile-username p" ).html(data["user_username"]);
-    
+        $( ".user-header-profile-username p" ).text(data["user_username"]);
+        $( ".user-stat-box .checkin").text(data["user_checkin"]);
 
     }
 });
