@@ -23,7 +23,7 @@
 
     <div class="places-wrapper">
 
-        <div class="form-error"> Please suscribe </div>
+        <div class="form-error">  </div>
 
         <div class="form">
             <form id="suscribe">
@@ -107,10 +107,13 @@ $(".validator").click(function(){
                     var error = "Password too short";
                     showError(error);
                 }
+                else if(result== '4'){
+                    var error = "Please fill in all the fields";
+                    showError(error);
+                }
                 else
                 {
                 $.cookie('bkknight_cookie', mail, { path: '/', expires: 365 });
-                alert($.cookie('bkknight_cookie'));
                 $(location).attr('href',"index2.html");
                 }
             }

@@ -222,30 +222,38 @@ body {
     border-radius: 3px;
 }
 .place-infos{
-    background-color: white;
-    padding: 15px 10px;
+    background-color: #FFFFFF;
+    padding: 0px 10px;
     margin-bottom: 10px;
     font-size: 1em;
     font-family: 'Roboto', sans-serif;
-    color: #A2A3A5;
+    font-weight: 300;
+    color: #5A6771;
 }
 .place-infos i{
     font-size: 1.5em;
     padding-right: 10px;
+    color: #B2BAC2;
 }
 .place-location{
-    padding-bottom: 15px;
+    height: 50px;
+    line-height: 50px;
 }
 .place-lastactivity{
-    padding: 15px 0px;
+    height: 50px;
+    line-height: 50px;
     border-top : 1px solid #EBEBEB;
 }
+.place-lastactivity .la{
+    color: red;
+}
 .place-tags{
-    padding-top: 15px;
+    height: 50px;
+    line-height: 50px;
     border-top : 1px solid #EBEBEB;
 }
 .place-tags span{
-    background-color: #A2A3A5;
+    background-color: #5A6771;
     margin: 0px 5px;
     padding: 3px;
     color: white;
@@ -317,7 +325,7 @@ body {
 
 
 
-/* ----------- LOGIN PAGE ----------- */
+/* ----------- INDEX/LOGIN PAGE ----------- */
 .login-page
 {
     width: 100%;
@@ -411,7 +419,7 @@ body {
     height: 20px;
     line-height: 20px;
     text-align: center;
-    color: white;
+    color: #FFFFFF;
     background-color: #EE797A;
     font-family: 'Roboto', 'FontAwesome';
     font-weight: 300;  
@@ -424,6 +432,28 @@ body {
     line-height: 60px;
     color: #FFFFFF;
     font-size: 2em;
+}
+/* ----------- LOGIN PAGE ----------- */
+.form-error-login{
+    display: none;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #EE797A;
+    font-family: 'Roboto', 'FontAwesome';
+    font-weight: 300;  
+}
+.forgot-password{
+    width: 100%;
+    text-align: center;
+    padding-top : 7px;
+    font-family: 'Roboto', 'FontAwesome';
+    font-weight: 300;
+    color: #023453;
+    font-size: 1.1em;
+
 }
 /* ----------- USER PAGE ----------- */
 .user-header{

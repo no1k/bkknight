@@ -21,13 +21,20 @@
         <span class="header-right-icon validator"> Next </span>
     </div>
 
+
+
     <div class="places-wrapper">
+
+        <div class="form-error-login"> d </div>
+
         <div class="form">
-            <form id="suscribe">
+            <form id="login">
                 <input type="email" id="mail" name="mail" placeholder="&#xf0e0; &nbsp; &nbsp; Enter your email">
                 <input type="password" id="password" placeholder="&#xf023; &nbsp; &nbsp;  Enter password">
             </form>
         </div>
+
+        <div class="forgot-password"> Forgot password ? </div>
 
     </div>
 
@@ -60,6 +67,10 @@ $( ".header-left-icon").click(function(){
 
 $(".validator").click(function(){
 
+    function showError(error) {
+        $(".form-error-login").text(error).slideDown().delay(1200).slideUp();
+    }
+
 
     var mail     = $("input#mail").val();
     var password = $("input#password").val();
@@ -69,7 +80,8 @@ $(".validator").click(function(){
 
     if(mail==''||password=='')
     {
-        alert("Please Fill All Fields");
+        var error = "Please fill in all the fields";
+        showError(error);
     }else{
         $.ajax({
             type: "POST",
@@ -77,8 +89,9 @@ $(".validator").click(function(){
             data: dataString,
             cache: false,
             success: function(result){
-            if(result == 'false'){
-                alert('Wrong login');
+            if(result == '1'){
+                var error = "Wrong login";
+                showError(error);
             }else{
                 $.cookie('bkknight_cookie', mail, { path: '/', expires: 365 });
                 $(location).attr('href',"index2.html");

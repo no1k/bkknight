@@ -23,19 +23,15 @@
     </div>
 
         <div class="places-wrapper">
-           
+
         </div>
 
         <div class="places-footer"> 
-
                 <div class="place-buttons">
                 <div class="place-button-checkin"> <i class="fa fa-check"></i> <br> I'm inside </div>
                 <div class="place-button-picture"> <i class="fa fa-camera"></i> </div>
                 <div class="place-button-closed"> <i class="fa fa-times"></i> <br> It's closed </div>
-           </div>
-
-
-
+                </div>
          </div>
 
 
@@ -43,9 +39,13 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="js/jquery-cookie-master/src/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/jquery.timeago.js"></script>
+
 <script>
 
 $( document ).ready(function() {
+
+
 
     // HEADER REDIRECTIONS
 
@@ -85,7 +85,8 @@ $( document ).ready(function() {
         url:'http://www.infactr.com/bkknight/getplacedata.php?name='+name,
             success:function(data) {
                  //ADD THE PLACES
-                $( ".places-wrapper" ).html($(data)); 
+
+                $( ".places-wrapper" ).html(data); 
                 }
 
      });
@@ -93,6 +94,27 @@ $( document ).ready(function() {
     }
 
     loadPlace();
+
+    function loadPlaceHits() {
+     $.ajax({
+        dataType:'html',
+        url:'http://www.infactr.com/bkknight/getplacedatahits.php?name='+name,
+            success:function(data) {
+                 //ADD THE PLACES
+
+                $( ".place-hits" ).html(data); 
+                $(".place-hits time.timeago").timeago()
+
+
+
+
+            }
+
+     });
+
+    }
+
+    loadPlaceHits()    
 
     $( ".header-right-icon" ).click(function(){
 
@@ -112,11 +134,13 @@ $( document ).ready(function() {
 
          $.ajax({
             type: "POST",
+            dataType:'html',
             url: "http://www.infactr.com/bkknight/addhit.php",
             data: dataString,
             cache: false,
             success: function(result){
 
+              $( ".place-hits" ).prepend(result);  
               $( ".place-button-checkin" ).css("background-color", "#18191B").css("color", "#FFFFFF");
 
             }
