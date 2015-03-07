@@ -119,6 +119,7 @@ $( document ).ready(function() {
     $( ".header-right-icon" ).click(function(){
 
     loadPlace();
+    loadPlaceHits();
 
    });
         
@@ -148,6 +149,29 @@ $( document ).ready(function() {
 
     });
 
+    // CAMERA EVENT
+
+    $( ".place-button-picture" ).click(function(){
+        navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+    destinationType: Camera.DestinationType.DATA_URL
+});
+
+function onSuccess(imageData) {
+    var image = document.getElementById('myImage');
+    image.src = "data:image/jpeg;base64," + imageData;
+}
+
+function onFail(message) {
+    alert('Failed because: ' + message);
+}
+
+    });
+
+
+
+
+
+    
                 
 });
 
