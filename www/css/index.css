@@ -523,25 +523,32 @@ body {
     color: #41739C;
     display: block;
 }
-.user-hit{
-    box-sizing: Border-box;
-    width: 97%;
-    margin: 0 auto;
-    padding: 0px 10px;
-    height: 40px;
-    line-height: 40px;
-    border-bottom: 1px solid #EBEBEB;
-    color: #232323;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 1.1em;
-}
 .user-hit img{
     width: 8%;
     border-radius: 4px;
     position:relative;
     top:9px;
+    margin-right: 5px;
 }
+.user-hit{
+    box-sizing: Border-box;
+    width: 97%;
+    margin: 0 auto;
+    padding: 0px 10px;
+    height: 55px;
+    line-height: 55px;
+    border-bottom: 1px solid #CECECE;
+    color: #232323;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.1em;
+}
+.user-hit .hit-time{
+    float: right;
+    font-size: 0.8em;
+    color: #5A6771;
+}
+
 .user-hit a{
     text-decoration: none;
     font-weight: 400;
@@ -555,11 +562,6 @@ body {
     margin: 0;
     padding: 0;
     display: inline;
-}
-.user-hit .hit-time{
-    float: right;
-    font-size: 0.8em;
-    color: #5A6771;
 }
 
 
