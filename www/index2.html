@@ -66,7 +66,8 @@ $( document ).ready(function() {
         url:'http://www.infactr.com/bkknight/lastactivity.php',
             success:function(data) {
                  //ADD THE PLACES
-                $('.wrapper-places').html($(data)); 
+                $('.wrapper-places').html($(data));
+                $(".lastactivity time.timeago").timeago(); 
 
                 //CLICKABLE 
                 $(" .d-place ").click(function(){
