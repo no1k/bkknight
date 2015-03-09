@@ -24,16 +24,19 @@
 
 <div class="wrapper"> 
     <div class="user-header">
-       <div class="user-header-profile-picture"> </div>
-       <div class="user-header-profile-username"> <p> Pierre </p> </div>
+       <div class="user-header-profile-picture"> <img src="http://www.infactr.com/bkknight/users_profile_pictures/pierre.jpg"/></div>
+       <div class="user-header-profile-username"> <i class="fa fa-user"></i> <p> Pierre2 </p> </div>
     </div>
     <div class="user-stats">
         <span class="user-stat-box"> Check in : <span class="data checkin"> 0 </span>  </span>
-        <span class="user-stat-box"> Closed :<span class="data checkout"> 0</span>  </span>
+        <span class="user-stat-box"> Closed :<span class="data closed"> 0</span>  </span>
         <span class="user-stat-box"> photos :   <span class="data photos"> 0</span>   </span>
 
     </div>
 
+    <div class="user-lastactivity">
+
+    </div>
 
 
 
@@ -72,9 +75,34 @@ $.ajax({
 
         $( ".user-header-profile-username p" ).text(data["user_username"]);
         $( ".user-stat-box .checkin").text(data["user_checkin"]);
+        $( ".user-stat-box .closed").text(data["user_closed"]);
+
 
     }
 });
+
+// GET USER DATA LAST ACTIVITY
+
+  $.ajax({
+        type: "POST",
+        dataType:'html',
+        url: "http://www.infactr.com/bkknight/getuserlastactivity.php?cookie="+dataString,
+        data: dataString,
+        cache: false,
+        success: function(result){
+
+            $( ".user-lastactivity" ).html(result);
+              
+
+        }
+});
+
+
+
+
+
+
+
 
 
 

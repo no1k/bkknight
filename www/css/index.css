@@ -463,10 +463,15 @@ body {
     border-bottom: 1px solid #D8D8D8;
 }
 .user-header-profile-picture{
-    width: 40%;
+    width: 22%;
     height: 100%;
     float: left;
-    background-color: red;
+    Box-sizing: Border-box;
+    padding : 10px 0px 0px 10px;
+}
+.user-header-profile-picture img{
+    width: 95%;
+    border-radius: 5px;
 }
 .user-header-profile-username{
     width: 55%;
@@ -474,11 +479,18 @@ body {
     height: 100%;
     float: left;
 }
+.user-header-profile-username i{
+    color: #B2BAC2;
+    font-size: 1.4em;
+    margin-right: 5px;
+}
 .user-header-profile-username p{
+    display: inline-block;
     margin: 5px 0px;
     font-size: 1.6em;
     font-family: 'Roboto', 'FontAwesome';
     font-weight: 500;
+    color: #5A6771;
 }
 .user-header-profile-username p:first-letter {
     text-transform: uppercase;
@@ -486,13 +498,13 @@ body {
 .user-stats{
     width: 100%;
     height: 60px;
-    background-color: white;
+    background-color: #FFFFFF;
     border-bottom: 1px solid #D8D8D8;
 }
 .user-stat-box{
     min-width: 30%;
     height: 100%;
-    line-height: 30px;
+    line-height: 26px;
     display: inline-block;
     font-size: 1.2em;
     font-family: 'Roboto', 'FontAwesome';
@@ -508,7 +520,7 @@ body {
 }
 .user-stat-box .data{
     font-size: 1.8em;
-    color: #949494;
+    color: #41739C;
     display: block;
 }
 

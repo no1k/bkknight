@@ -123,7 +123,7 @@ $( document ).ready(function() {
 
    });
         
-    // BUTTON EVENTS
+    // BUTTON EVENTS CHECKIN
 
     $( ".place-button-checkin" ).click(function(){
 
@@ -140,9 +140,34 @@ $( document ).ready(function() {
             data: dataString,
             cache: false,
             success: function(result){
-
+            
               $( ".place-hits" ).prepend(result);  
               $( ".place-button-checkin" ).css("background-color", "#18191B").css("color", "#FFFFFF");
+
+            }
+        });
+
+    });
+
+
+    $( ".place-button-closed" ).click(function(){
+
+        var user = $.cookie('bkknight_cookie');
+        var name = getUrlParameter('ref');
+
+        
+        var dataString = 'user=' + user + '&place=' + name;
+
+         $.ajax({
+            type: "POST",
+            dataType:'html',
+            url: "http://www.infactr.com/bkknight/addhit.php?closed",
+            data: dataString,
+            cache: false,
+            success: function(result){
+
+              $( ".place-hits" ).prepend(result);  
+              $( ".place-button-closed" ).css("background-color", "#18191B").css("color", "#FFFFFF");
 
             }
         });
@@ -152,18 +177,25 @@ $( document ).ready(function() {
     // CAMERA EVENT
 
     $( ".place-button-picture" ).click(function(){
-        navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-    destinationType: Camera.DestinationType.DATA_URL
-});
+       
 
-function onSuccess(imageData) {
-    var image = document.getElementById('myImage');
-    image.src = "data:image/jpeg;base64," + imageData;
-}
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+    destinationType: Camera.DestinationType.FILE_URI });
 
-function onFail(message) {
-    alert('Failed because: ' + message);
-}
+    function onSuccess(imageURI) {
+        var image = document.getElementById('myImage');
+        image.src = imageURI;
+
+        $.post( "http://infactr.com/bkknight/uploadimage.php", {data: image.src}, function(data) {
+        alert("Image uploaded!");
+    });
+
+    }
+
+    function onFail(message) {
+        alert('Failed because: ' + message);
+    }
+
 
     });
 
