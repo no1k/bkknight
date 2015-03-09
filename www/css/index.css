@@ -536,6 +536,17 @@ body {
     font-weight: 300;
     font-size: 1.1em;
 }
+.user-hit img{
+    width: 8%;
+    border-radius: 4px;
+    position:relative;
+    top:9px;
+}
+.user-hit a{
+    text-decoration: none;
+    font-weight: 400;
+    color: #41739C;
+}
 .user-hit .hit-user{
     color: #41739C;
     font-weight: 500;
@@ -548,7 +559,7 @@ body {
 .user-hit .hit-time{
     float: right;
     font-size: 0.8em;
-    color: #B2BAC2;
+    color: #5A6771;
 }
 
 
