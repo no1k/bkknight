@@ -130,17 +130,19 @@ body {
 .d-place .statut{
     float: right;
     color: #FFF;
-    width: 25%;
+    width: 40%;
     margin: 10px 3% 0% 0%;
-    padding: 3px 4px;
-    border-radius: 2px;
-    text-align: center;
+    text-align: center; 
+    /*border:1px solid RGBA(216, 216, 216, 0.2);*/
+}
+.d-place .statut p{
+    margin: 0px;
+    padding: 5px 3px;
     background-color: RGBA(36, 81, 27, 1);
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-weight: 900;
     text-transform: uppercase;
     font-size: 1.5em;
-    /*border:1px solid RGBA(216, 216, 216, 0.2);*/
 }
 .d-place .data{
     margin: 37px 5px 5px 5px;
