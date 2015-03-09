@@ -523,7 +523,33 @@ body {
     color: #41739C;
     display: block;
 }
-
+.user-hit{
+    box-sizing: Border-box;
+    width: 97%;
+    margin: 0 auto;
+    padding: 0px 10px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #EBEBEB;
+    color: #232323;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.1em;
+}
+.user-hit .hit-user{
+    color: #41739C;
+    font-weight: 500;
+}
+.user-hit .hit-user p{
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+.user-hit .hit-time{
+    float: right;
+    font-size: 0.8em;
+    color: #B2BAC2;
+}
 
 
 /* Landscape layout (with min-width) */
