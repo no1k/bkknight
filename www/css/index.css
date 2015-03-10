@@ -71,7 +71,7 @@ body {
     position: relative;
     float: left;
     left: 30%;
-    color: white;
+    color: #FFFFFF;
     font-size: 1.7em;
     font-family: 'roboto';
     font-weight: 500;
@@ -150,10 +150,7 @@ body {
     border-radius: 3px;
     text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
 }
-.d-place .statut i{
-    color: #3B5957;
-    text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
-}
+
 .d-place .statut .triangle{
     Box-sizing: Border-box;
     float: left;
