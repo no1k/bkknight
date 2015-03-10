@@ -130,7 +130,7 @@ body {
 }
 .d-place .statut{
     float: right;
-    color: #FFFFFF;
+    color: #3B5957;
     width: 40%;
     margin: 10px 3% 0% 0%;
     text-align: center;
@@ -142,15 +142,17 @@ body {
     float: right;
     height: 27px;
     line-height: 27px;
-    background-color: #7BBC9B;
+    background-color: #5D8D89;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     text-transform: uppercase;
     font-size: 1.2em;
     border-radius: 3px;
+    text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
 }
 .d-place .statut i{
-    color: #3E8685;
+    color: #3B5957;
+    text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
 }
 .d-place .statut .triangle{
     Box-sizing: Border-box;
@@ -158,12 +160,10 @@ body {
     width: 20%;
     position: relative;
     top:8px;
-  
-    
-height: 0;
-border-style: solid;
-border-width: 5px 5px 5px 0;
-border-color: transparent #7BBC9B transparent transparent;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 5px 0;
+    border-color: transparent #5D8D89 transparent transparent;
    
 }
 .d-place .data{
@@ -176,7 +176,7 @@ border-color: transparent #7BBC9B transparent transparent;
     display: inline-block;
     min-width: 25%;
     margin: 5px 0% 0% 2%;
-    font-size: 3em;
+    font-size: 3.2em;
     color: white;
     font-family: 'Slabo27';
     text-transform: uppercase;
