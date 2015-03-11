@@ -218,12 +218,12 @@ body {
 }
 .place-header-text{
     position: relative;
-    top: 70px;
-    padding: 0% 5%;
+    top: 75px;
+    padding: 0% 2%;
 }
 .place-name{
     float : left;
-    font-size: 3.9em;
+    font-size: 3.4em;
     font-family: 'Slabo27';
     text-transform: uppercase;
     color: #FFFFFF;
@@ -232,8 +232,7 @@ body {
     float: right;
     position: relative;
     top: 8px;
-    font-size: 1.2em;
-    width: 55%;
+    width: 45%;
     color: #3B5957;
 }
 .place-statut p{
@@ -288,9 +287,6 @@ body {
     height: 50px;
     line-height: 50px;
     border-top : 1px solid #EBEBEB;
-}
-.place-lastactivity .la{
-    color: red;
 }
 .place-tags{
     height: 50px;
