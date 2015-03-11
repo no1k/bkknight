@@ -22,13 +22,15 @@
         <span class="header-right-icon"> <i class="fa fa-refresh"></i> </span>
     </div>
 
+    
 
     <div class="wrapper">
             
         <div class="search">
             <div class="search-bar"> <input type="text" name="search" id="search" placeholder="&#xF002; Search for places"/> </div>
         </div>
-                
+
+         <div id="demo"></div>       
 
         <div class="wrapper-places"> </div>
             
@@ -94,8 +96,19 @@ $( document ).ready(function() {
    });
 
 
-                    
-      
+                      
+        var x = document.getElementById("demo");
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude + 
+        "<br>Longitude: " + position.coords.longitude; 
+    }  
 
 
 
