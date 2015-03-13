@@ -30,8 +30,6 @@
             <div class="search-bar"> <input type="text" name="search" id="search" placeholder="&#xF002; Search for places"/> </div>
         </div>
 
-         <div id="demo"></div>       
-
         <div class="wrapper-places"> </div>
             
     </div>
@@ -46,10 +44,12 @@
 <script type="text/javascript" src="js/jquery-cookie-master/src/jquery.cookie.js"></script>
 <script type="text/javascript" src="js/jquery.timeago.js"></script>
 
+
 <script>
               
 
 $( document ).ready(function() {
+
 
 
     console.log($.cookie());
@@ -97,18 +97,6 @@ $( document ).ready(function() {
 
 
                       
-        var x = document.getElementById("demo");
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
-        }
-    }
-    function showPosition(position) {
-        x.innerHTML = "Latitude: " + position.coords.latitude + 
-        "<br>Longitude: " + position.coords.longitude; 
-    }  
 
 
 
