@@ -38,7 +38,7 @@
         <div class="place-location"> <i class="fa fa-map-marker"></i> <p> </p>  </div> 
         <div class="place-lastactivity"> <i class="fa fa-heartbeat"></i>
             <p> Last activity : <time class="timeago" datetime=""></time> </p> </div>
-        <div class="place-tags"> <i class="fa fa-tags"></i> </div> <span class="test"> </span>
+        <div class="place-tags"> <i class="fa fa-tags"></i> </div>
     </div>
 
 
@@ -72,26 +72,33 @@
 $( document ).ready(function() {
 
 
+// HEADER BUTTONS
+$( ".header-left-icon").click(function(){
+    parent.history.back();
+    return false;
+});
 
-    // HEADER REDIRECTIONS
+$( ".header-right-icon" ).click(function(){
 
-     $( ".header-left-icon").click(function(){
-            $(location).attr('href',"index2.html");
-    });
+    loadPlace();
+    loadPlaceHits();
 
-    // AJAX LOADING
+});
 
-    $( document ).ajaxStart(function() {
-        $( " .header-right-icon " ).html("<i class='fa fa-refresh fa-spin'></i>");
-         $( ".place-tags span" ).hide();
-    });
 
-   $( document ).ajaxComplete(function() {
-       $( " .header-right-icon " ).html("<i class='fa fa-refresh'></i>");
-   });
+// AJAX LOADING SETTING
+$( document ).ajaxStart(function() {
+    $( " .header-right-icon " ).html("<i class='fa fa-refresh fa-spin'></i>");
+    
+});
 
-     function getUrlParameter(sParam)
-    {
+$( document ).ajaxComplete(function() {
+    $( " .header-right-icon " ).html("<i class='fa fa-refresh'></i>");
+});
+
+
+// GET THE REF OF THE PLACE
+function getUrlParameter(sParam) {
     var sPageURL = window.location.search.substring(1);
     var sURLVariables = sPageURL.split('&');
     for (var i = 0; i < sURLVariables.length; i++) 
@@ -102,24 +109,19 @@ $( document ).ready(function() {
             return sParameterName[1];
         }
     }
-    }  
+}  
+
+var name = getUrlParameter('ref');
 
 
-    var name = getUrlParameter('ref');
-
-    function loadPlace() {
-     $.ajax({
+// LOAD PLACE DATA
+function loadPlace() {
+    $.ajax({
         type: "get",
         dataType:"json",
         url:'http://www.infactr.com/bkknight/getplacedata.php?name='+name,
             success:function(data) {
-    
-
-     
-
-
-
-        var imgURL = "-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))), url(http://www.infactr.com/bkknight/img/" + data['place_photo'] + ")";
+         var imgURL = "-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))), url(http://www.infactr.com/bkknight/img/" + data['place_photo'] + ")";
 
         $( ".place-header" ).css("background-image", imgURL);
         $( ".place-name").text(data["place_name"]); 
@@ -131,46 +133,39 @@ $( document ).ready(function() {
             $( ".place-tags" ).append("<span>" + this + "</span>");
          });
 
-       
-            }
+        $( ".place-location" ).click(function(){ 
+            $(location).attr('href',"map.html?latitude=" + data["place_latitude"] + "&longitude=" + data["place_longitude"]);
+        });
+    
+        }
 
-     });
+    });
 
-    }
+}
 
-    loadPlace();
+   loadPlace();
 
-    function loadPlaceHits() {
+
+// LOAD LAST HITS
+function loadPlaceHits() {
      $.ajax({
         dataType:'html',
         url:'http://www.infactr.com/bkknight/getplacedatahits.php?name='+name,
             success:function(data) {
-                 //ADD THE PLACES
-
                 $( ".place-hits" ).html(data); 
                 $(".place-hits time.timeago").timeago();
-
-
-
-
             }
 
      });
 
-    }
+}
 
     loadPlaceHits()    
 
-    $( ".header-right-icon" ).click(function(){
-
-    loadPlace();
-    loadPlaceHits();
-
-   });
+    
         
-    // BUTTON EVENTS CHECKIN
-
-    $( ".place-button-checkin" ).click(function(){
+// BUTTON EVENTS (INSIDE/CLOSED)
+$( ".place-button-checkin" ).click(function(){
 
         var user = $.cookie('bkknight_cookie');
         var name = getUrlParameter('ref');
@@ -192,7 +187,7 @@ $( document ).ready(function() {
             }
         });
 
-    });
+});
 
 
     $( ".place-button-closed" ).click(function(){
@@ -221,35 +216,30 @@ $( document ).ready(function() {
 
 
 //SCROLL EVENT 
-
-    var initialHeight = $( ".places-wrapper" ).height();
+var initialHeight = $( ".places-wrapper" ).height();
         
+$( ".places-wrapper ").scroll(function(){
 
-    $( ".places-wrapper ").scroll(function(){
-
-        //Ajax request
-        if($( ".places-wrapper" ).scrollTop() == $( ".places-wrapper")[0].scrollHeight - initialHeight){
+    
+    if($( ".places-wrapper" ).scrollTop() == $( ".places-wrapper")[0].scrollHeight - initialHeight){
             
-            var PlaceID = $( "input[name='placeID']:last" ).val();
-            var lastHitDate = $( "input[name='hitDate']:last" ).val();
+        var PlaceID = $( "input[name='placeID']:last" ).val();
+        var lastHitDate = $( "input[name='hitDate']:last" ).val();
 
-            $.ajax({
-                dataType : 'html',
-                url : "http://www.infactr.com/bkknight/loadr.php?placeID="+PlaceID+"&lastHitDate="+lastHitDate ,
-                success : function(html){
-                            
-
-                            $( ".place-hits" ).append(html); 
-                             $(".place-hits time.timeago").timeago();
-                        }
-                    });
-
-        }
-
-        
-    });
+        $.ajax({
+            dataType : 'html',
+            url : "http://www.infactr.com/bkknight/loadr.php?placeID="+PlaceID+"&lastHitDate="+lastHitDate ,
+            success : function(html){
+                        $( ".place-hits" ).append(html); 
+                        $(".place-hits time.timeago").timeago();
+                    }
+                });
+    }
+});
    
 
+//MAP
+$(" .")
     function initialize() {
         var mapOptions = {
           center: { lat: -34.397, lng: 150.644},

@@ -20,10 +20,10 @@
     <div class="header">
         <span class="header-left-icon"> <i class="fa fa-chevron-left"></i> </span>
         <span class="header-logo"> BKKnight </span>
-        <span class="header-right-icon"> <i class="fa fa-refresh"></i> </span>
+        <span class="header-right-icon"> </span>
     </div>
 
-        <div class="places-wrapper">
+        <div class="wrapper">
 
           <div id="map-canvas"></div>
 
@@ -42,29 +42,55 @@
 
 $( document ).ready(function() {
 
+//HEADER BUTTONS
 
-
-    // HEADER REDIRECTIONS
-
-     $( ".header-left-icon").click(function(){
-            $(location).attr('href',"index2.html");
-    });
-
-
-      
+$( ".header-left-icon").click(function(){
+    parent.history.back();
+    return false;
 });
 
-</script>
-<script type="text/javascript">
-      function initialize() {
+//GET LATITUDE + LONGITUDE 
+
+// GET THE REF OF THE PLACE
+function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}  
+
+var latitude  = getUrlParameter('latitude');
+var longitude = getUrlParameter('longitude');
+
+function initialize() {
+
+        var myLatlng = new google.maps.LatLng(latitude,longitude);
+
         var mapOptions = {
-          center: { lat: -34.397, lng: 150.644},
-          zoom: 10
+          center: myLatlng,
+          zoom: 15
         };
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
+
+      var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'Hello World!'
+  });
       }
       google.maps.event.addDomListener(window, 'load', initialize);
+      
+});
+
+
+      
     </script>
 
 </body>
