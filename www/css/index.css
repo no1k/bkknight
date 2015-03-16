@@ -9,6 +9,11 @@ html {
     overflow: hidden;
     height: 100%;
 }
+p{
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
 
 
 
@@ -275,8 +280,8 @@ body {
 }
 .place-infos i{
     position: relative;
-    top: 3px;
-    font-size: 1.5em;
+    top: 2px;
+    font-size: 1.6em;
     padding-right: 10px;
     color: #B2BAC2;
 }
@@ -303,21 +308,33 @@ body {
     text-transform: uppercase;
 }
 .place-hits{
-    width: 97%;
-    margin: 0 auto;
-    color: #232323;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+  
+}
+.place-hits img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    position:relative;
+    top:9px;
+    margin-right: 5px;
+}
+.place-hit a{
+    text-decoration: none;
+    font-weight: 400;
+    color: #41739C;
 }
 .place-hits .hit{
     box-sizing: Border-box;
-    width: 100%;
+    width: 97%;
+    margin: 0 auto;
     padding: 0px 10px;
-    height: 40px;
+    height: 55px;
+    line-height: 55px;
+    border-bottom: 1px solid #CECECE;
+    color: #232323;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     font-size: 1.1em;
-    line-height: 40px;
-    margin-bottom: 5px;
-    border-bottom : 1px solid #EBEBEB;
 }
 .place-hits .hit .hit-user{
     color: #41739C;
@@ -325,7 +342,59 @@ body {
 }
 .place-hits .hit-time{
     float: right;
+    font-size: 0.8em;
+    color: #5A6771;
 }
+
+
+
+
+
+
+.user-hit img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    position:relative;
+    top:9px;
+    margin-right: 5px;
+}
+.user-hit{
+    box-sizing: Border-box;
+    width: 97%;
+    margin: 0 auto;
+    padding: 0px 10px;
+    height: 55px;
+    line-height: 55px;
+    border-bottom: 1px solid #CECECE;
+    color: #232323;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.1em;
+}
+.user-hit .hit-time{
+    float: right;
+    font-size: 0.8em;
+    color: #5A6771;
+}
+
+.user-hit a{
+    text-decoration: none;
+    font-weight: 400;
+    color: #41739C;
+}
+.user-hit .hit-user{
+    color: #41739C;
+    font-weight: 500;
+}
+.user-hit .hit-user p{
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+
+
 
 
 
@@ -364,9 +433,15 @@ body {
     padding-top: 5px;
 }
 
+/* ------------------------------ MAP PAGE ------------------------------ */
 
-
-
+#map-canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: BLUE;
+    z-index: 100;
+}
 /* ------------------------------ LOGIN PAGE ------------------------------ */
 .login-page
 {
@@ -475,7 +550,7 @@ body {
     color: #FFFFFF;
     font-size: 2em;
 }
-/* ----------- LOGIN PAGE ----------- */
+/* ------------------------------ LOGIN PAGE ------------------------------ */
 .form-error-login{
     display: none;
     width: 100%;
@@ -497,7 +572,7 @@ body {
     font-size: 1.1em;
 
 }
-/* ----------- USER PAGE ----------- */
+/* ------------------------------ USER PAGE ------------------------------ */
 .user-header{
     width: 100%;
     height: 80px;

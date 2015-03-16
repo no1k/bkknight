@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+    <!--
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />  , target-densitydpi=device-dpi -->
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="css/fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:900,500,100,300,700,400' rel='stylesheet' type='text/css'>
+    <title>BKKnight</title>
+</head>
+<body>
+
+    
+
+    <div class="header">
+        <span class="header-left-icon"> <i class="fa fa-chevron-left"></i> </span>
+        <span class="header-logo"> BKKnight </span>
+        <span class="header-right-icon"> <i class="fa fa-refresh"></i> </span>
+    </div>
+
+        <div class="places-wrapper">
+
+          <div id="map-canvas"></div>
+
+        </div>
+
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-cookie-master/src/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/jquery.timeago.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOmF0kShk6y3M63SLcl1auA231gp01as4">
+</script>
+
+<script>
+
+$( document ).ready(function() {
+
+
+
+    // HEADER REDIRECTIONS
+
+     $( ".header-left-icon").click(function(){
+            $(location).attr('href',"index2.html");
+    });
+
+
+      
+});
+
+</script>
+<script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: { lat: -34.397, lng: 150.644},
+          zoom: 10
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+</body>
+</html>
