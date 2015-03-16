@@ -38,7 +38,7 @@
         <div class="place-location"> <i class="fa fa-map-marker"></i> <p> </p>  </div> 
         <div class="place-lastactivity"> <i class="fa fa-heartbeat"></i>
             <p> Last activity : <time class="timeago" datetime=""></time> </p> </div>
-        <div class="place-tags"> <i class="fa fa-tags"></i> </div>
+        <div class="place-tags"> <i class="fa fa-tags"></i> </div> <span class="test"> </span>
     </div>
 
 
@@ -114,7 +114,12 @@ $( document ).ready(function() {
         url:'http://www.infactr.com/bkknight/getplacedata.php?name='+name,
             success:function(data) {
     
-        var imgURL = "url(http://www.infactr.com/bkknight/img/" + data['place_photo'] + ")";
+
+     
+
+
+
+        var imgURL = "-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))), url(http://www.infactr.com/bkknight/img/" + data['place_photo'] + ")";
 
         $( ".place-header" ).css("background-image", imgURL);
         $( ".place-name").text(data["place_name"]); 
@@ -143,7 +148,7 @@ $( document ).ready(function() {
                  //ADD THE PLACES
 
                 $( ".place-hits" ).html(data); 
-                $(".place-hits time.timeago").timeago()
+                $(".place-hits time.timeago").timeago();
 
 
 
@@ -214,30 +219,36 @@ $( document ).ready(function() {
 
     });
 
-    // CAMERA EVENT
 
-    $( ".place-button-picture" ).click(function(){
-       
+//SCROLL EVENT 
 
-    navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
-    destinationType: Camera.DestinationType.FILE_URI });
+    var initialHeight = $( ".places-wrapper" ).height();
+        
 
-    function onSuccess(imageURI) {
-        var image = document.getElementById('myImage');
-        image.src = imageURI;
+    $( ".places-wrapper ").scroll(function(){
 
-        $.post( "http://infactr.com/bkknight/uploadimage.php", {data: image.src}, function(data) {
-        alert("Image uploaded!");
+        //Ajax request
+        if($( ".places-wrapper" ).scrollTop() == $( ".places-wrapper")[0].scrollHeight - initialHeight){
+            
+            var PlaceID = $( "input[name='placeID']:last" ).val();
+            var lastHitDate = $( "input[name='hitDate']:last" ).val();
+
+            $.ajax({
+                dataType : 'html',
+                url : "http://www.infactr.com/bkknight/loadr.php?placeID="+PlaceID+"&lastHitDate="+lastHitDate ,
+                success : function(html){
+                            
+
+                            $( ".place-hits" ).append(html); 
+                             $(".place-hits time.timeago").timeago();
+                        }
+                    });
+
+        }
+
+        
     });
-
-    }
-
-    function onFail(message) {
-        alert('Failed because: ' + message);
-    }
-
-
-    });
+   
 
     function initialize() {
         var mapOptions = {
@@ -252,9 +263,7 @@ $( document ).ready(function() {
 });
 
 </script>
-<script type="text/javascript">
-      
-    </script>
+
 
 </body>
 </html>
