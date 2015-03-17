@@ -59,29 +59,32 @@ body {
     line-height: 50px;
 }
 .header-left-icon{
-    position: relative;
+    width: 33.3%;
     float: left;
-    left: 5%;
+    text-align: left;
+    box-sizing: Border-box;
+    padding-left: 5%;
     color: white;
     font-size: 1.8em;
 }
 .header-right-icon{
-    position: relative;
+    width: 33.3%;
+    text-align: right;
+    box-sizing: Border-box;
+    padding-right: 5%;
     float: right;
-    right: 5%;
     color: white;
     font-size: 1.8em;
 }
 .header-logo{
-    position: relative;
+    width: 33.3%;
     float: left;
-    left: 30%;
+    text-align: center;
     color: #FFFFFF;
     font-size: 1.7em;
     font-family: 'roboto';
     font-weight: 500;
     text-transform: uppercase;
-    text-align: center;
 }
 
 /* ------------------------------ SEARCH BAR ------------------------------ */
