@@ -185,7 +185,7 @@ $( ".place-button-checkin" ).click(function(){
             cache: false,
             success: function(result){
               
-              if(result = "1"){
+              if(result == "1"){
                 $(".hit-error").text('Flood protection (5 minutes)').slideDown().delay(1200).slideUp();
               }else{
 
@@ -215,7 +215,7 @@ $( ".place-button-checkin" ).click(function(){
             cache: false,
             success: function(result){
 
-              if(result = "1"){
+              if(result == "1"){
                 $(".hit-error").text('Flood protection (5 minutes)').slideDown().delay(1200).slideUp();
               }else{
               $( ".place-hits" ).prepend(result);  

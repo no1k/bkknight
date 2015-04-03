@@ -47,20 +47,19 @@
 
 <script>
               
-
 $( document ).ready(function() {
 
+//AJAX ICON
 
+$( document ).ajaxStart(function() {
+    $( " .header-right-icon " ).html("<i class='fa fa-refresh fa-spin'></i>");
+});
 
-    console.log($.cookie());
+$( document ).ajaxComplete(function() {
+    $( " .header-right-icon " ).html("<i class='fa fa-refresh'></i>");
+});
 
-    $( document ).ajaxStart(function() {
-        $( " .header-right-icon " ).html("<i class='fa fa-refresh fa-spin'></i>");
-    });
-
-   $( document ).ajaxComplete(function() {
-       $( " .header-right-icon " ).html("<i class='fa fa-refresh'></i>");
-   });
+//LOAD LAST ACTIVITY
 
    function loadLastActivity() {
         $.ajax({
