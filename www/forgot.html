@@ -18,29 +18,24 @@
    <div class="header">
         <span class="header-left-icon"> <i class="fa fa-arrow-left"></i> </span>
         <span class="header-logo"> BKKnight </span>
-        <span class="header-right-icon validator"> Next </span>
+        <span class="header-right-icon validator"> Finish </span>
     </div>
 
 
 
     <div class="places-wrapper">
 
-        <div class="form-error-login">  </div>
-
         <div class="form">
-            <form id="login" action="index2.html">
+            <form id="forget">
                 <input type="email" id="mail" name="mail" placeholder="&#xf0e0; &nbsp; &nbsp; Enter your email">
-                <input type="password" id="password" placeholder="&#xf023; &nbsp; &nbsp;  Enter password">
             </form>
         </div>
-
-        <div class="forgot-password"> <a href="forgot.html"> Forgot password ? </a></div>
 
     </div>
 
 
 <div class="places-footer"> 
-    <div class="action validator"> Next </div>
+    <div class="action validator"> Finish </div>
 </div>
 
 
@@ -59,54 +54,16 @@ $( document ).ready(function() {
 // HEADER LINKS REDIRECTIONS
 
 $( ".header-left-icon").click(function(){
-            $(location).attr('href',"index.html");
-});    
-
-
-// TEST FORM ENTRIES BEFORE SUBMIT
-
-$(".validator").click(function(){
-
-    function showError(error) {
-        $(".form-error-login").text(error).slideDown().delay(1200).slideUp();
-    }
-
-
-    var mail     = $("input#mail").val();
-    var password = $("input#password").val();
-
-
-    var dataString = 'mail=' + mail + '&password=' + password;
-
-    if(mail==''||password=='')
-    {
-        var error = "Please fill in all the fields";
-        showError(error);
-    }else{
-        $.ajax({
-            type: "POST",
-            url: "http://www.infactr.com/bkknight/login.php",
-            data: dataString,
-            cache: false,
-            success: function(result){
-            if(result == '1'){
-                var error = "Wrong login";
-                showError(error);
-            }else{
-                $.cookie('bkknight_cookie', mail, { path: '/', expires: 365 });
-                $( "#login" ).submit();
-            }
-        
-    
-
-        }
-    });
-    }
+            $(location).attr('href',"login.html");
+});   
 
 
 
- });
-                
+
+
+
+
+          
 });
    
 </script>

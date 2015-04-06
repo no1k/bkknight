@@ -43,6 +43,9 @@
         <div class="place-tags"> <i class="fa fa-tags"></i> </div>
     </div>
 
+    <div class="infos1"> lol </div> 
+    <div class="infos2"> lol </div>
+    <div class="infos3"> lol </div>
 
 
     <div class="place-hits">
@@ -227,13 +230,22 @@ $( ".place-button-checkin" ).click(function(){
     });
 
 
-//SCROLL EVENT 
-var initialHeight = $( ".places-wrapper" ).height();
-        
+//SCROLL EVENT
+
+      
 $( ".places-wrapper ").scroll(function(){
 
-    
-    if($( ".places-wrapper" ).scrollTop() == $( ".places-wrapper")[0].scrollHeight - initialHeight){
+var windowHeight = $( ".places-wrapper" ).height();
+var documentHeight = $( ".places-wrapper")[0].scrollHeight;
+var scrollFromTop = $( ".places-wrapper" ).scrollTop();
+var marge = 70;
+
+    $(".infos1").text(windowHeight);
+    $(".infos2").text(documentHeight);
+    $(".infos3").text(scrollFromTop);
+
+
+    if( scrollFromTop == documentHeight - windowHeight - marge){
             
         var PlaceID = $( "input[name='placeID']:last" ).val();
         var lastHitDate = $( "input[name='hitDate']:last" ).val();

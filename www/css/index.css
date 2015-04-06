@@ -538,9 +538,11 @@ body {
     padding-top : 7px;
     font-family: 'Roboto', 'FontAwesome';
     font-weight: 300;
-    color: #023453;
     font-size: 1.1em;
-
+}
+.forgot-password a{
+    text-decoration: none;
+    color: #023453;
 }
 /* ------------------------------ USER PAGE ------------------------------ */
 .user-header{
