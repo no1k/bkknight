@@ -73,6 +73,7 @@
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOmF0kShk6y3M63SLcl1auA231gp01as4">
 </script>
 
+
 <script>
 
 $( document ).ready(function() {
@@ -233,22 +234,33 @@ $( ".place-button-checkin" ).click(function(){
 
 //SCROLL EVENT
 
-      
+    
 $( ".places-wrapper ").scroll(function(){
 
 var windowHeight = $( ".places-wrapper" ).height();
 var documentHeight = $( ".places-wrapper")[0].scrollHeight;
 var scrollFromTop = $( ".places-wrapper" ).scrollTop();
-var marge = 70;
+var margin = 70;
 
     $(".infos1").text(windowHeight);
     $(".infos2").text(documentHeight);
-    $(".infos22").text(documentHeight - windowHeight - marge);
+    $(".infos22").text(documentHeight - windowHeight - margin);
     $(".infos3").text(scrollFromTop);
 
+var isLoading = false;
 
-    if( scrollFromTop == documentHeight - windowHeight - marge){
+    if( scrollFromTop >= documentHeight - windowHeight - margin){
             
+    if ( !isLoading )
+     {
+        isLoading = true;
+        loadNextPage();
+     }  
+             
+    }
+
+    function loadNextPage(){
+
         var PlaceID = $( "input[name='placeID']:last" ).val();
         var lastHitDate = $( "input[name='hitDate']:last" ).val();
 
@@ -256,11 +268,14 @@ var marge = 70;
             dataType : 'html',
             url : "http://www.infactr.com/bkknight/loadr.php?placeID="+PlaceID+"&lastHitDate="+lastHitDate ,
             success : function(html){
+                    isLoading = false;
                         $( ".place-hits" ).append(html); 
                         $(".place-hits time.timeago").timeago();
                     }
                 });
+
     }
+
 });
    
 

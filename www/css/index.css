@@ -654,7 +654,34 @@ body {
     padding: 0;
     display: inline;
 }
-
+/* ------------------------------ USER SETTING PAGE ------------------------------ */
+.setting-menu div{
+    clear: both;
+    box-sizing: Border-box;
+    padding: 0px 15px;
+    margin: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    line-height: 50px;
+    border-bottom: 1px solid #CECECE;
+    color:#232323;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.4em;
+  
+}
+.setting-menu div i{
+    padding: 0px;
+    margin: 0px;
+    color: #626262;
+    width: 8%;
+    font-size:1.1em;
+}
+.setting-menu .setting-arrow {
+    float: right;
+    font-size: 1.4em;
+}
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
