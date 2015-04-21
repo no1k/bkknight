@@ -18,7 +18,7 @@
  <div class="header">
         <span class="header-left-icon"> <i class="fa fa-chevron-left"></i> </span>
         <span class="header-logo"> BKKnight </span>
-        <span class="header-right-icon"> <i class="fa fa-cog"></i> </span>
+        
 </div>
 
 
@@ -63,7 +63,11 @@ $( ".header-left-icon" ).click(function(){
 });
 
 
+// REDIRECTION
 
+$( ".setting-username" ).click(function(){
+    $(location).attr('href',"changeusername.html");
+});
 
 
 }); 
